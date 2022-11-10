@@ -8,6 +8,8 @@ class fraction:
     self.den1=den1
     self.num2=num2
     self.den2=den2
+    
+# definir operaciones
 
   def suma(self):
     n = int(num1*den2+den1*num2)
@@ -29,6 +31,7 @@ class fraction:
     d = int(self.den1*self.num2)
     return (n/d)
 
+# solicitar valores
 
 num1=int(input("Ingrese el numerador A: "))
 den1=int(input("Ingrese el denominador A: "))
@@ -42,6 +45,8 @@ print("1. suma \n2. resta \n3. multiplicacion \n4. division")
 print("\n")
 
 x=int(input("Elija una opcion: "))
+
+# realizar operacion solicitada
 
 if(x==1):
   print(num1,"/",den1,"+",num2,"/",den2)
