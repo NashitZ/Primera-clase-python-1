@@ -1,1 +1,65 @@
-sdsdsd
+# Clase-Python
+
+class fraction:
+
+  def __init__(self,num1,num2,den1,den2):
+
+    self.num1=num1
+    self.den1=den1
+    self.num2=num2
+    self.den2=den2
+
+  def suma(self):
+    n = int(num1*den2+den1*num2)
+    d = int(den1*den2)
+    return (n/d)
+  
+  def resta(self):
+    n = int(self.num1*self.den2)-(self.den2*self.num2)
+    d = int(self.den1*self.den2) 
+    return (n/d)
+
+  def multiplicacion(self):
+    n = int(num1*num2)
+    d = int(den1*den2)
+    return (n/d)
+
+  def division(self):
+    n = int(self.num1*self.den2)
+    d = int(self.den1*self.num2)
+    return (n/d)
+
+
+num1=int(input("Ingrese el numerador A: "))
+den1=int(input("Ingrese el denominador A: "))
+
+num2=int(input("Ingrese el numerador B: "))
+den2=int(input("Ingrese el denominador B: "))
+
+print("\nIngrese la operacion a realizar")
+
+print("1. suma \n2. resta \n3. multiplicacion \n4. division")
+print("\n")
+
+x=int(input("Elija una opcion: "))
+
+if(x==1):
+  print(num1,"/",den1,"+",num2,"/",den2)
+  obj = fraction(num1,den1,num2,den2)
+  print("{:.4f}".format(obj.suma()))
+elif(x==2):
+  print(num1,"/",den1,"-",num2,"/",den2)
+  obj = fraction(num1,den1,num2,den2)
+  print("{:.4f}".format(obj.resta()))
+elif(x==3):
+  print(num1,"/",den1,"x",num2,"/",den2)
+  obj = fraction(num1,den1,num2,den2)
+  print("{:.4f}".format(obj.multiplicacion()))
+elif(x==4):
+  print(num1,"/",den1,":",num2,"/",den2)
+  obj = fraction(num1,den1,num2,den2)
+  print("{:.4f}".format(obj.division()))
+else:
+  print("Ingrese un valor de entre las opciones")
+
+
